@@ -7719,7 +7719,7 @@ textarea.textarea-lg {
 	}
 
 	.desktop .thumbnail-mary-figure img {
-		transform: scale(1.2);
+		transform: scale(1.1);
 		will-change: transform;
 	}
 
@@ -26047,4 +26047,66 @@ disabled look for disabled choices in the results dropdown
 	.articulo img {
 		margin: 20px;
 		width: 60%;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.4);
+		align-items: center;
+		justify-content: center;
+	}
+
+	.modal-content {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 8px;
+		width: 90%;
+		max-width: 400px;
+		position: relative;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Botón de cerrar */
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		color: #aaa;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.close:hover {
+		color: #000;
+	}
+
+	#btnOpenQR,
+	#btnOpenHorario,
+	#btnOpen2D,
+	#btnOpen3D {
+		cursor: pointer;
+	}
+
+	.modal-content.modal2D {
+		max-width: 1200px;
+		padding: 50px;
+	}
+
+	.modal-content.modalQR {
+		max-width: 1200px;
+		padding: 50px;
+	}
+
+	.modal-content.modal3D {
+		max-width: 1200px;
+		padding: 50px;
+		align-items: center;
 	}
