@@ -661,16 +661,6 @@
     </div>
   </div>
 
-  <!-- <div id="modal3D" class="modal">
-    <div class="modal-content modal3D">
-      <span class="close" id="btnClose3D">&times;</span>
-      <iframe id="videoFrame" width="1000" height="500" src="" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
-    </div>
-  </div> -->
-
   <div id="modal3D" class="modal">
     <div class="modal-content modal3D">
       <span class="close" id="btnClose3D">&times;</span>
@@ -687,12 +677,24 @@
   </div>
 
   <div id="modalHorario" class="modal">
-    <div class="modal-content">
+    <div class="modal-content modalHorarios">
       <span class="close" id="btnCloseHorario">&times;</span>
-      <h3>Horario</h3>
-      <p>Este es el contenido de tu ventana modal.</p>
+
+      <!-- Slider con controles integrados -->
+      <div class="slider">
+        <div class="slides">
+          <img src="./images/horario mañana_Mesa de trabajo 1.jpg" alt="Imagen 1" class="slide" />
+          <img src="./images/horario tarde-02.jpg" alt="Imagen 2" class="slide" />
+          <img src="./images/horario noche-03.jpg" alt="Imagen 3" class="slide" />
+        </div>
+
+        <!-- Controles dentro del slider -->
+        <button class="slider-control slider-prev" id="prevSlide">&lt;</button>
+        <button class="slider-control slider-next" id="nextSlide">&gt;</button>
+      </div>
     </div>
   </div>
+
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
@@ -700,6 +702,7 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script src="./js/modal.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
 
 </html>

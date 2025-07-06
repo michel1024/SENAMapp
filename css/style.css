@@ -26068,7 +26068,7 @@ disabled look for disabled choices in the results dropdown
 		padding: 20px;
 		border-radius: 8px;
 		width: 90%;
-		max-width: 400px;
+		/* max-width: 400px; */
 		position: relative;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	}
@@ -26101,6 +26101,11 @@ disabled look for disabled choices in the results dropdown
 	}
 
 	.modal-content.modalQR {
+		max-width: 1200px;
+		padding: 50px;
+	}
+
+	.modal-content.modalHorarios {
 		max-width: 1200px;
 		padding: 50px;
 	}
@@ -26139,4 +26144,67 @@ disabled look for disabled choices in the results dropdown
 		width: 100%;
 		height: 100%;
 		border: none;
+	}
+
+	/* Estilos para este modal de horarios con slider */
+	/* <div id="modalHorario" class="modal">
+    <div class="modal-content modalHorarios">
+      <span class="close" id="btnCloseHorario">&times;</span>
+      <!-- Slider -->
+      <div class="slider">
+        <div class="slides">
+          <img src="./images/horario mañana_Mesa de trabajo 1.jpg" alt="Imagen 1" class="slide" />
+          <img src="./images/horario tarde-02.jpg" alt="Imagen 2" class="slide" />
+          <img src="./images/horario noche-03.jpg" alt="Imagen 3" class="slide" />
+        </div>
+      </div>
+    </div>
+  </div> */
+
+	.modal-content.modalHorarios .slider {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.modal-content.modalHorarios .slides {
+		display: flex;
+		transition: transform 0.5s ease;
+	}
+
+	.modal-content.modalHorarios .slide {
+		min-width: 100%;
+		box-sizing: border-box;
+	}
+
+	.modal-content.modalHorarios .slide img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+
+	.slider-control {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: rgba(0, 0, 0, 0.5);
+		border: none;
+		color: white;
+		font-size: 2rem;
+		padding: 10px 15px;
+		cursor: pointer;
+		z-index: 10;
+		transition: background-color 0.3s;
+	}
+
+	.slider-control:hover {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	.slider-prev {
+		left: 10px;
+	}
+
+	.slider-next {
+		right: 10px;
 	}

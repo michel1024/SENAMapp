@@ -132,7 +132,7 @@
       <div class="container">
         <h3>¿Cómo podemos ayudarte?</h3>
         <div class="row row-30">
-          <div class="col-sm-6 col-lg-4">
+          <div class="col-sm-6 col-lg-4" id="btnOpenQR">
             <article class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
@@ -147,7 +147,7 @@
               </div>
             </article>
           </div>
-          <div class="col-sm-6 col-lg-4">
+          <div class="col-sm-6 col-lg-4" id="btnOpen2D">
             <article class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
@@ -163,7 +163,7 @@
               </div>
             </article>
           </div>
-          <div class="col-sm-6 col-lg-4">
+          <div class="col-sm-6 col-lg-4" id="btnOpen3D">
             <article class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
@@ -180,7 +180,7 @@
             </article>
           </div>
           <div class="col-sm-6 col-lg-4">
-            <article class="box-icon-classic">
+            <a href="./aplicación.html" class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
                 <div class="unit-left">
@@ -192,9 +192,22 @@
                     configura tus preferencias de idioma y notificaciones.</p>
                 </div>
               </div>
-            </article>
+            </a>
+            <!-- <article class="box-icon-classic">
+              <div
+                class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                <div class="unit-left">
+                  <div class="box-icon-classic-icon fl-bigmug-line-cellphone55"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="box-icon-classic-title">Aplicación</h5>
+                  <p class="box-icon-classic-text">Abre la app y registrate con tu correo o número celular; luego,
+                    configura tus preferencias de idioma y notificaciones.</p>
+                </div>
+              </div>
+            </article> -->
           </div>
-          <div class="col-sm-6 col-lg-4">
+          <div class="col-sm-6 col-lg-4" id="btnOpenHorario">
             <article class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
@@ -210,7 +223,7 @@
             </article>
           </div>
           <div class="col-sm-6 col-lg-4">
-            <article class="box-icon-classic">
+            <a href="./contactanos.html" class="box-icon-classic">
               <div
                 class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
                 <div class="unit-left">
@@ -222,7 +235,7 @@
                     equipo. Estamos abiertos a tus recomendaciones. </p>
                 </div>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </div>
@@ -485,11 +498,64 @@
       </div>
     </footer>
   </div>
+
+
+  <!-- Modal -->
+  <div id="modalQR" class="modal">
+    <div class="modal-content modalQR">
+      <span class="close" id="btnCloseQR">&times;</span>
+      <img src="./images/QR.jpg" />
+    </div>
+  </div>
+
+  <div id="modal2D" class="modal">
+    <div class="modal-content modal2D">
+      <span class="close" id="btnClose2D">&times;</span>
+      <img src="./images/Mapa2D.jpg" />
+    </div>
+  </div>
+
+  <div id="modal3D" class="modal">
+    <div class="modal-content modal3D">
+      <span class="close" id="btnClose3D">&times;</span>
+
+      <!-- Contenedor responsivo del iframe -->
+      <div class="video-wrapper">
+        <iframe id="videoFrame" src="" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modalHorario" class="modal">
+    <div class="modal-content modalHorarios">
+      <span class="close" id="btnCloseHorario">&times;</span>
+
+      <!-- Slider con controles integrados -->
+      <div class="slider">
+        <div class="slides">
+          <img src="./images/horario mañana_Mesa de trabajo 1.jpg" alt="Imagen 1" class="slide" />
+          <img src="./images/horario tarde-02.jpg" alt="Imagen 2" class="slide" />
+          <img src="./images/horario noche-03.jpg" alt="Imagen 3" class="slide" />
+        </div>
+
+        <!-- Controles dentro del slider -->
+        <button class="slider-control slider-prev" id="prevSlide">&lt;</button>
+        <button class="slider-control slider-next" id="nextSlide">&gt;</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
 
 </html>
